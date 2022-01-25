@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 2 Parte 2</title>
+    <link rel="stylesheet" href="../módulo2_parte1/style.css">
+    <link rel="shortcut icon" href="numero_2.jpg" type="image/x-icon">
+</head>
+<body>
+    <a href="../módulo2_parte1/index.html" class="link_interno">Acessar a Primeira Parte</a>
+    <h1>APRENDER SOBRE A PROPRIEDADE POSITION E DEPOIS PASSAR PRA WIKI</h1>
+    <h1>Seletores Personalisados</h1>
+   <p>os seletores Personalisados são muito úteis quando você quer formatações diferentes para elementos do mesmo tipo, você não precisa ficar usando CSS inline e bagunçar seu HTML nestes casos, é só diferenciar os seletores</p>
+   <h2>id em CSS</h2>
+   <p>um id é um identificador de uma tag, se você der um id para uma tag você pode mudar as configurações de CSS dessa única tag, sem mudar as outras que forem do mesmo tipo</p>
+   <p>por exemplo, se tiver três h1, e você quiser que um seja diferente dos outros, você não precisa usar CSS inline, é só dar um id para o h1 que você quer, daí você vai poder mudar o CSS dele sem alterar os outros, e você vai mudarele com CSS local ou externo, sem poluir o HTMl</p>
+   <p>para dar um id para uma tag, é só usar o parâmetro id dentro da abertura dessa tag, e dentro das aspas você coloca a identificação, uma boa dica é sempre usar identificadores em letras minúsculas, porque se você criar um identificador com a primeira letra em maiúsculo e usar o id em minúsculo vai dar erro, então sempre em letras minúsculas para deixar mais organizado e não acontecer isso</p>
+   <p>o símbolo de # significa id em CSS, tudo que é id em HTML vira # em CSS, e tudo que é class(que veremos daqui a pouco) em HTML vira . em CSS, lembre-se bem disso</p>
+   <p>digamos que o identificador que você deu para esse h1 foi "especial", para mudar esse h1 no CSS nesse caso você iria usar <strong>h1#especial {configurações}</strong></p>
+   <p>no exemplo você estaria dizendo ao seu código que as configurações dentro das chaves só vão ser aplicadas no h1 que tiver o id "especial", você não pode dar o mesmo id para vários elementos, se você fizer isso até vai dar certo, mas a w3c não recomenda isso, se quiser dar o mesmo id para mais de um elemento, você vai usar classe</p>
+   <h2>class em CSS</h2>
+   <p>as classes no CSS são identificas por ., ou seja, tudo que é class em HTML, é <strong>.</strong> no CSS</p>
+   <p>para dar uma class para um elemento, é a mesma coisa que o id, é só usar o parâmetro class na abertura da tag</p>
+   <p>uma dica para escolher o nome de uma class é escolher dependendo do que o elemento representa, não a formatação que ele vai receber. Tipo, se tiver um título principal, e você quer que ele seja Azul, você vai chamar a class de "principal", não de "azul"</p>
+   <p>para mudar a formatação de elementos de uma classe, é igual no id, digamos que o nome da classe seja "secundario", para mudar as configurações dos elementos dessa classe, você usaria <strong>.secundario {configurações}</strong>, nesse caso, todos os elementos que tiverem essa classe vão ser afetados, se você quiser que apenas os h2 dessa classe sejam afetados, você usaria <strong>h2.secundario {configurações}</strong>, se fossem todos os h2 e h3 dessa classe por exemplo, você poderia usar <strong>h2, h3.secundario {configurações}</strong></p>
+   <p>você pode usar duas classes em um mesmo elemento, basta colocar as duas dentro das aspas, separadas apenas por um espaço</p>
+   <p>você também pode colocar um id e uma class para um mesmo elemento</p>
+   <p>se estiver em dúvida qual vai ser priorizado, olhe o style, sempre quem estiver mais abaixo vai ser a prioridade</p>
+   <p>se você quiser colocar uma class ou id para uma parte de um paragráfo por exemplo, sem afetar o resto do paragráfo, você pode usar a tag <strong>span</strong>, ela não faz absolutamente nada, mas você pode colocar a class ou id nela, e colocar dentro dela a parte do paragráfo que você quer usar a class ou id</p>
+   <h2>Elementos Dentro de Outros Elementos(children)</h2>
+   <p>você pode selecionar elementos que estão dentro de outros elementos, para isso você tem que indicar o caminho para esses elementos, que nem você faz com pastas, mas usando o sinal de &gt;</p>
+   <p>por exemplo, digamos que você queira mudar as configurações de todos os links que estejam dentro de paragrafos, mas não os que estejam fora, então você usaria o seletor <strong>p > a {configurações}</strong></p>
+   <p>mas agora, digamos que você queira mudar as configurações de todos os links que estejam dentro da tag main, mas se você colocasse "main > a {configurações}, os links dos paragrafos dentro do main não seriam afetados, só seriam afetados os links diretamente dentro do main, sem estar dentro de nenhuma outra tag, então nesse caso você usaria <strong>main a {configurações}</strong></p>
+   <p>Dessa forma, todos os links dentro do main seriam afetados, até os dentro de outras tags do main.</p>
+   <h2>Pseudo-classes</h2>
+   <p>pseudo-classe é uma classe que é dada para um elemento dependendo do seu estado</p>
+   <p>no CSS, as pseudo-classes são representadas por :</p>
+   <p>por exemplo, temos a pseudo-classe hover, elementos da pseudo-classe hover são aqueles que o mouse está em cima, ou seja, quando você passa o mouse por cima de um elemento, ele recebe a pseudo-classe hover, quando você tira o mouse desse elemento, ele perde essa classe</p>
+   <p>para mudar as configurações CSS dos elementos div da pseudo-classe hover por exemplo, escrevemos no CSS interno ou externo: <strong>div:hover {configurações}</strong></p>
+   <p>você pode usar isso para dar meio que uma interatividade ao elemento, por exemplo,você pode configurar uma tag div com o fundo vermelho, usando <strong>div {background-color: red}</strong>, e embaixo colocar <strong>div:hover {background-color: blue}</strong>, desse jeito vai ter uma tag div com o fundo vermelho, e quando você passar o mouse por cima dela, ela vai receber a pseudo-classe hover e assim ficar com o fundo azul quando o mouse passar</p>
+   <p>outra coisa MUUUITO legal é fazer tipo uma animação dessa transição, para isso você usa o parâmetro <strong>transition-duration</strong>, nele você coloca um tempo em formato de segundo, e a transição vai levar esse tempo para acontecer ao invés de acontecer na hora, criando uma pequena animação</p>
+   <p>para usar um valor em segundo, é só colocar um s na direita desse valor, lembrando que pode ser um valor quebrado(usando o ponto, não vírgula)</p>
+   <p>você pode usar o parâmetro transition-duration tanto no elemento normal como no elemento com hover, se você usar no normal a animação vai acontecer quando você tirar o mouse de cima do elemento e ele mudar para a cor normal, se você colocar no elemento hover a animação vai acontecer quando você colocar o mouse em cima do elemento e ele mudar para a cor do hover, o ideal é usar nos dois!</p>
+   <p>com isso, podemos fazer um exemplo bem legal, digamos que você queira esconder um texto dentro de uma div, e mostrar ele quando o mouse passar por cima da div, primeiramente para esconder algo, você usaria no CSS <strong>display: none</strong>, o display serve para mostrar como vai ser a apresentação do texto, se o display for none, o texto vai ser invisível</p>
+   <p>então primeiramente a gente usaria no CSS <strong>div > p {display: none}</strong>, ou seja, todos os paragráfos dentro de divs seriam invisíveis, daí embaixo poderiamos colocar <strong>div:hover > p {display: block}</strong>, isso significa que todos os paragráfos dentro de divs de classificação hover serão visíveis, ou seja, o que iria acontecer é que o paragráfo ficaria invisível quando o div não for hover(ou seja, quando o mouse não estiver em cima do div), mas ficaria visível quando o div for hover, então quando o usuário passar o mouse em cima do div, o texto escondido vai aparecer</p>
+   <p>o sinal <strong>></strong> significa children em CSS, então no caso acima, ele estaria mudando as configurações de paragráfos filhos de divs</p>
+   <p>o guanabara também ensina outras duas pseudo-classes, o visited, que éuma pseudo-classe de links, todo a:visited são links para páginas quejá foram visitadas alguma vez</p>
+   <p>e a outra é o active, é uma pseudo-classe dada para elementos segurados pelo mouse, ou seja, quando você segura o botão esquerdo do mouse em algo, ele recebe a pseudo-classe active</p>
+   <h2>Pseudo-elementos</h2>
+   <p>Pseudo-elementos mexem no conteúdo de elementos, eles são representados por <strong>::</strong> no CSS</p>
+   <p>vamos aprender dois exemplos de Pseudo-elementos, o <strong>before</strong> e o <strong>after</strong></p>
+   <p>o before e o after adicionam conteúdo para um elemento, o before adiciona conteúdo à esquerda do elemento, e o after à direita</p>
+   <p>você pode usar eles com o parâmetro <strong>content</strong></p>
+   <p>se você usar por exemplo <strong>a::after {content: "adicionar isso"}</strong>, ele vai adicionar a frase entre parentêses à direita de todos os links, você poderia usar <strong>a::before {content: "adicionar isso"}</strong>, ele adicionaria à esquerda, se você quisesse colocar algo à direita de todos os links e mudar a cor do que vai ser adicionado para azul por exemplo, você usaria <strong>a::after{content: "adicionar"; color: blue}</strong>, você pode mudar a aparência do que vai ser adicionado da forma que você quiser</p>
+   <p>você pode misturar ids, classes, pseudo-classes e pseudo-elementos em um mesmo seletor, então digamos que você queira adicionar uma palavra à esquerda de todos os elementos da classe "especial", então você usaria <strong>.especial::before {content: "adicionar"}</strong></p>
+   <h2>Seletor Global</h2>
+   <p>um seletor global é um seletor que muda as configurações de todos os elementos do site, ele é o *(asterisco)</p>
+   <p>ao criar um seletor global, todas as configurações dentro dele vão ser passadas para todos os elementos, esse seletor precisa estar no topo do documento CSS</p>
+   <p>se você quisesse tirar padding e o margin de todos os elementos, por exemplo, você usaria:
+   <p>* {<br>padding: 0px <br> margin: 0px <br>}</p>
+   </p>
+   <h2>Variaveis em CSS</h2>
+   <p>o CSS não é uma linguagem de programação, mas ele você pode usar variaveis para guardar valores como uma cor ou uma fonte, dessa forma você pode inserir a mesma cor por exemplo, em varios elementos, apenas chamando ela pela variavel, facilita muito a vida</p>
+   <p>para criar variaveis em css, você declarar elas dentro de um seletor no inicio do documento CSS chamado <strong>:root</strong></p>
+   <p>ou seja, você vai criar esse seletor e declarar as variaveis nele, para declarar uma variavel nele você coloca --, daí o nome da variavel, dois pontos(:) daí o valor da variavel</p>
+   <p>se você quiser criar duas variaveis por exemplo, uma chamada "cor_padrao" com a cor #3ddc84(que é um tom de verde), e a outra chamada "fonte_padrao" com a fonte Arial, você usaria: </p>
+   <p>:root {<br>--cor_padrao: #3ddc84 <br> --fonte_padrao: Arial<br>}</p>
+   <p>esse seletor tem que estar obrigatoriamente no topo do documento CSS, mais acima do que o *(seletor global), se não vai dar errado</p>
+   <p>dessa forma, se você quisesse usar a cor #3ddc84 em um background-color, você poderia colocar <strong>background-color: var(--cor_padrao)</strong> ao invés de background-color: #3ddc84</p>
+   <p>da mesma forma, se você quisesse usar a fonte Arial em um elemento, você colocaria <strong>font-family: var(--fonte_padrao)</strong> ao invés de font-family: Arial</p>
+   <p>você precisar colocar a variavel dentro desse var() para dar certo, para o programa entender que é uma variavel</p>
+   <h1>Começando a Falar de Caixas</h1>
+   <p>caixas são espaços na tela, tudo que é exibido na tela é exibido em forma de caixa, toda caixa tem altura e largura, se você não configurar nada por padrão a caixa vai ter a largura da tela inteira.</p>
+   <p>veja a seguir a anatomia de uma caixa: </p>
+   <img src="anatomia_caixas.png" alt="anatomia de uma caixa" width="500" class="imagem_centro" id="anatomia_caixas">
+   <p>em um site as caixas ficam uma dentro da outra, isso se chama <strong>aninhamento</strong>, isso é um dos principais fundamentos para você dar forma para um site</p>
+   <p>a maior caixa de um site é o body por curiosidade</p>
+   <p>as caixas podem ser de dois tipos, <strong>box-level</strong> e <strong>inline-level</strong>. Pense em um paragráfo, dentro desse paragráfo você tem várias linhas de conteúdo, digamos que você coloque uma tag exatamente no meio desse conteúdo que escreva algo na tela, se essa tag for do tipo <strong>box-level</strong> ela vai quebrar uma linha, vai escrever, vai quebrar mais uma linha e só daí ele vai continuar o conteúdo. Mas se essa tag for do tipo <strong>inline-level</strong>, ele não vai quebrar linha, vai escrever e daí já vai continuar o conteúdo</p>
+   <p>exemplos de tags box-level são h1, p, main, div, e MUITAS outras</p>
+   <p>exemplos de tags inline-level são strong, input, span e MUITAS outras</p>
+   <p>então vamos voltar ao exemplo, mas agora vamos usar a tag div para a tag box-level e a tag span para a tag inline-level, se você tem um pragráfo com conteúdo, e no meio desse conteúdo você coloca a tag div coma palavra "exemplo", ele vai quebrar uma linha, vai escrever "exemplo", vai quebrar mais uma linha e daí sim vai continuar o conteúdo. Mas se você usar a tag span no meio desse conteúdo com a palavra "exemplo", ele não vai quebrar linha, vai escrever "exemplo" e vai continuar o conteúdo na mesma linha mesmo, espero que tenha ficado claro.</p>
+   <p>você pode transformar um elemento box-level para inline-level e vise-versa, o parâmetro que decide isso é o <strong>display</strong>, elementos com <strong>display: block;</strong> são do tipo box-level, e os elementos com <strong>display: inline</strong> são do tipo inline-level, você pode mudar esse parâmetro se quiser mudar o tipo da caixa.</p>
+   <h2>Mudando as Configurações da Caixa na Prática</h2>
+   <p>Uma ferramenta que ajuda demais para mudar as configurações de alguma caixa é o devtools, abra seu site no google(tem que ser o google), aperte o botão direito do mouse e selecione "inspecionar", vá na area de elementos e aumente o tamanho da janela, você vai ver que vai ter uma parte da janela que vai ficar parecida com o Visual Studio, aperte nessa parte o elemento que você quer selecionar, daí na outra parte da janela vai ter as configurações CSS que foram aplicadas para esse elemento, se você não tiver mudado nada ele vai usar as configurações <strong>user agent</strong>, que é o padrão. Também um desenho de uma caixa divida em partes, com números indicando tamanhos de cada parte, os - são partes que são sem tamanhos, ou seja, que não existem.</p>
+   <p>para mudar alguma configuração CSS você aperta nela(na area de configurações, não de elementos), depois de apertar você pode rodar a rodinha do mouse se for um número, ou reescrever se for uma palavra, lembrando que você vai estar mudando a versão que já chegou em seu computador, não o original</p>
+   <p>se quiser mudar a borda você pode usar 3 configurações(que são as mais usadas, mas existem outras), o <strong>border-width</strong>, o <strong>border-style</strong>, e o <strong>border-color</strong>, o border-width é a expessura da borda, você muda isso por um número de px, o border-style é o estilo da borda, olhe os estilos de borda:</p>
+       <img src="estilos-de-bordas.png" alt="estilos de borda" id="estilos_de_borda"
+       class="imagem_centro">
+   <p>você também pode usar o shorthand <strong>border</strong>, nele você informa primeiro o border-width, depois o border-style, e depois o border-color, separados apenas por espaços</p>
+   <p>você pode colocar uma imagem como borda também, nós vamos ver isso mais abaixo</p>
+   <p>agora vamos ajustar o <strong>padding</strong>, o padding é ajustado por um número de px. O padding, o margin e o outline podem ser ajustados por lado, ou seja, você pode ajustar apenas o padding de cima, ou apenas o da direita, assim você pode dar um padding diferente para cada lado, o border também tem essa possibilidade na verdade, mas é muito pouco usado</p>
+   <p>para fazer isso, você usa <strong>padding-top</strong> para o padding de cima, o <strong>padding-right</strong> para o padding da direita, o <strong>padding-bottom</strong> para o de baixo, e o <strong>padding-left</strong> para o padding da esquerda</p>
+   <p>o recomendado é você indicar o padding(e as outras medidas de caixa) de cada lado em sentido horário, ou seja, primeiro o de cima, depois o da direita, depois o de baixo, e depois o da esquerda</p>
+   <p>você pode usar o shorthand <strong>padding</strong>, nele você informa os tamanhos em ordem de relógio, ou seja, primeiro o de cima, depois o da direita, depois o de baixo, e por fim o da esquerda, mas se todos tiverem o mesmo valor você pode digitar apenas esse valor, então ele será utilizado em todos os lados, se você colocar dois valores, o padding de cima e de baixo vão ter o primeiro tamanho e o padding da esquerda e direita vão ter o segundo tamanho</p>
+   <p>é a mesma coisa para mudar a margem, você pode mudar um lado de uma margem isoladamente com <strong>margin-top, margin-right, margin-bottom, margin-left</strong>, de preferência nessa ordem, ou você usa o shorthand <strong>margin</strong>, e da os tamanhos em ordem de relógio como no padding, e se forem todos o mesmo tamanho você digita ele uma vez e esse valor será passado para todas as direções. Você pode colocar <strong>auto</strong> no margin, dessa forma o elemento sempre vai ficar no meio da janela, MAS ISSO SÓ FUNCIONA COM ELEMENTOS DE DISPLAY BLOCK, se a tela ou janela mudar de tamanho ele vai se adaptar, e como no padding, se você colocar dois valores, o margin de cima e de baixo vão ter o primeiro tamanho e o margin da esquerda e direita vão ter o segundo tamanho</p>
+   <p>e mais uma coisa, se você quiser centralizar a margem da esquerda e a da direita, coloque auto nos lugares do margin-left e margin-right no shorthand</p>
+   <p>o <strong>outline</strong> fica dentro da margem, e grudado na borda, você muda essa medida igual a borda, você usa <strong>outline-width, outline-style, </strong>e <strong>outline-color</strong>, os estilos de outline são os mesmos que os de borda,você pode olhar a imagem um pouco mais pra cima. O outline pode ser maior do que a margem, um não interfere no tamanho do outro</p>
+   <p>o shorthand do outline é igual ao do border, primeiro você indica o outline-width, depois o outline-style, e depois o outline-color</p>
+   <p><strong>IMPORTANTE</strong>: você pode usar números negativos no margin ou padding, dessa forma a caixa vai crescer, se você colocar um padding-left negativo por exemplo, a caixa vai crescer para a esquerda, da pra fazer muita coisa útil com isso</p>
+   <h2>Como Centralizar Imagens?</h2>
+   <p>se tiver tentado isso, você provavelmente percebeu que não é possivel usar o <strong>margin: auto;</strong> em imagens, isso é porque elas são do tipo inline-level,que vimos mais a acima</p>
+   <p>para centralizar imagens, é só mudar o tipo delas para box-level(ou block), para isso nós mudamos o formato do display usando <strong>display: block;</strong>, dessa forma, a imagem vai mudar para o tipo box-level e o <strong>margin: auto;</strong> vai funcionar nessa imagem</p>
+   <h2>Agrupando Caixas De Maneira Semântica</h2>
+   <p>como nós já vimos, um site é uma mistura de várias caixas, umas dentro das outras,para agrupar as caixas nós vamos usar tags semânticas, tem gente que agrupa caixas usando várias tags div e span, mas vira uma bagunça e não tem semântica, e semântica é super importante</p>
+   <p>existem 7 tags semânticas principais para ajeitar seu conteúdo, olhe só: </p>
+   <ul>
+        <li><abbr title="Cria um cabeçalho, pode ser o cabeçalho principal do site inteiro ou o cabeçalho de uma seção ou artigo, geralmente contém os menus do site(tag nav) e/ou títulos h1 até h6">Header</abbr></li>
+        <li><abbr title="Cria um menu para a navegação no seu site, geralmente fica dentro de um header">Nav</abbr></li>
+        <li><abbr title="Delimita o conteúdo principal do site inteiro, geralmente guarda as seções, artigos e conteúdos periféricos">Main</abbr></li>
+        <li><abbr title="cria uma seção(uma caixa grande) que agrupa o conteúdo, geralmente contém artigos e conteúdos periféricos">Section</abbr></li>
+        <li><abbr title="Cria um artigo. Um artigo é um conteúdo, todo conteúdo dentro de um artigo fala sobre o mesmo assunto, como um blog, um fórum, uma notícia, etc">Article</abbr></li>
+        <li><abbr title="Coloque um aside ao lado ou dentro de um artigo, um aside é algo que tem relação com um artigo, mas não faz parte do conteúdo em si">Aside</abbr></li>
+        <li><abbr title="É um rodapé. Um rodapé é algo que possui informações sobre algo, como autoria, links adicionais, endereços, mapa do site e documentos relacionados. Pode ser o rodapé de uma seção, de um artigo, ou até do site inteiro">Footer</abbr></li>
+   </ul>
+   <p>lembrando que essas tags são como divs, elas não tem nada de especial, mas elas são semânticas, sempre use elas para agrupar caixas</p>
+   <h2>Posicionando Caixas</h2>
+   <p>se você reparar, todas as caixas normais seguem uma ordem, uma depois da outra, e não dá pra posicionar, você até pode posicionar o conteúdo usando o padding, mas você só vai estar aumentando a caixa, não posicionando</p>
+   <p>para posicionar as suas caixas, você pode mudar a propriedade <strong>position</strong>, vamos entender como essa propriedade funciona</p>
+   <p>tem 4 tipos de position, <strong>static</strong>, <strong>absolute</strong>, <strong>relative</strong>, e <strong>fixed</strong></p>
+   <p>se você não configurar o position de um elemento, ele por padrão vai ser do tipo <strong>static</strong>, elementos static seguem a ordem normal do site, ou seja, uma caixa depois da outra, elementos static não podem ser posicionados, os outros 3 podem</p>
+   <p>elementos com o position <strong>relative</strong> são parecidos com os static, a diferença é que eles podem ser posicionados, se você quiser você pode colocar um em cima do outro por exemplo, algo que não seria possivel com o static. Se você não posicionar um elemento relative, ele vai seguir a ordem normal das caixas, ele tem um espaço pra ele igual a um elemento static, mas depois de declarar um elemento como relative, você pode usar outros dois parâmetros que são o <strong>top</strong> e o <strong>left</strong>, neles você coloca medidas em px para definir a distancia da esquerda da tela(left) e de cima(top)</p>
+   <p>elementos com o position <strong>absolute</strong> não ocupam nenhum espaço, eles não segue a ordem normal da caixa e por padrão só ficam por cima dos outros elementos, porque eles não tem um espaço reservado para eles no site, mas o absolute é um grande quebra galho no CSS. Com ele você pode posicionar qualquer elemento de acordo com o elemento pai que tenha um position diferente de static. Se o elemento pai for static, ele meio que nem vai fazer parte do elemento pai, ele só vai ficar jogado, mas se o elemento pai for um relative por exemplo, o elemento absolute vai ficar pra dentro do elemento pai, e ele vai poder ser posicionado com relação ao elemento pai, também usando os parâmetros top e left</p>
+   <p>os elementos com o position <strong>fixed</strong> são os mais diferentes, eles se posicionam em relação à tela, e eles não saem do ponto onde foram posicionados, é como naqueles sites que você entra e o cabeçalho te acompanha site inteiro. Elementos fixed, assim como os absolute, não ocupam nenhum espaço, você posiciona eles com os parâmetros top e left, e eles ficam naquele local desde que o usuario abre o site até o fim</p>
+   <h2>Ferramenta para construir layout</h2>
+   <p>Isso é MUITO importante, você pode fazer o layout com o <a href="https://www.mockflow.com/" target="_blank">mockflow</a>, lá você faz login se já tiver uma conta ou cria com clicando em "sign up", pra você criar uma conta você precisa informar seu nome completo, um email, uma senha que você vai criar agora, e repetir essa senha na proxima caixa de texto</p>
+   <h2>Responsividade Básica</h2>
+   <p>A Responsividade de um site é a forma que ele vai responder a diferentes dispositivos e telas, não tem como fazer um site sem responsividade</p>
+   <p>nessa parte do curso, nós aprendemos poucos recursos de responsividade, mas com eles já dá pra fazer o site se adaptar bem</p>
+   <p>para começar na responsividade, nós vamos aprender os recursos <strong>min-width</strong> e <strong>max-width</strong>, eles limitam a altura mínima e a maxima(nessa ordem), para dar certo você precisa usar os dois, nem um nem outro, mas sim os dois</p>
+   <p>com esses parâmetros, o site vai diminuir até o min-width quando a tela for menor, e vai aumentar até o max-width quando a tela for maior, então por exemplo, quando a tela estiver diminuindo, o site vai diminuir até chegar no min-width, mas quando chegar no min-width ele vai parar de diminuir, mesmo que a tela seja menor que algum elemento, o mesmo vale para o max-width, o site vai aumentar sempre que preciso, até chegar ao max-width, daí os elementos vão parar de crescer mesmo que a tela seja maior que os elementos</p>
+   <p>para usar eles é só colocar em cada elemento que pode ficar vazando caso a tela seja menor que o elemento, os principais alvos são as mídias como imagens e vídeos e caixas de texto que não sejam justify(porque o justify já é responsivo), é só colocar o número desejado para cada um em formato de px</p>
+   <p>além do min-width e max-width, você também pode usar um outro elemento responsivo que é o width normal, mas com valores em porcentagem, se você colocar o parâmetro <strong>width: 100%;</strong> em uma imagem por exemplo, ela vai ocupar sempre a largura inteira da caixa, isso significa que se a caixa diminuir(por meio da responsividade), essa imagem também vai diminuir e se adaptar, o mesmo acotece se a caixa aumentar</p>
+   <p>e não se esqueça do elemento <strong>picture</strong> que aprendemos no módulo passado, você pode conferir lá, ele adapta as imagens</p>
+   <h2>Responsividade em Videos do youtube e Vimeo</h2>
+   <p>Se você já tentou isso só com o que acabamos de aprender, você provavelmente percebeu que os videos do youtube e do vimeo não são muito compátiveis com o min-width e o max-width, isso é porque eles já vieram prontos para o seu código, mas vamos aprender um truque para transforma-los em vídeos responsivos</p>
+   <p>primeiramente, você precisa envolopar o iframe do video com uma tag div, daí você coloca um id ou class na div para conseguir mudar as configurações dela e do iframe</p>
+   <p>agora você coloca um <strong>position: absolute;</strong> no IFRAME, e um <strong>position: relative;</strong> na DIV, como nós vimos mais acima nesse capitúlo, elementos absolute podem ser posicionados e configurados em relação à tag pai se ela não for static(por isso mudamos a div para relative)</p>
+   <p>fazendo isso, você vai ver que vai ficar tudo bagunçado, o vídeo vai ficar em cima dos elementos abaixo da div, e a div não vai nem aparecer, isso é porque o video é absolute, sendo assim ele não ocupa espaço, daí a div se comporta como se estivesse vazia, sem nada dentro, ou seja, ela some, mas para resolver isso você aumenta o padding-bottom da DIV até ela cobrir todo o vídeo, de preferência usando uma porcentagem</p>
+   <p>depois disso, você pode posicionar o video dentro da div usando os parâmetros top e left nas configurações do iframe, mas se o video for cobrir a div inteira não precisa, é só uma opção</p>
+   <p>agora você vai mudar o height e o width do iframe, coloque uma porcentagem em cada um, se você quiser que a div não apareça e o vídeo cubra a div inteira coloque 100% nos dois, mas se quiser que a div faça uma borda em cima e dos lados, você pode colocar 90% por exemplo, eu acho que 100% fica mais bonito na maioria dos casos</p>
+   <p>agora dê play no vídeo, se ele ficar com barras pretas dos lados ou em cima você precisa mudar o padding-bottom  da DIV, se as barras estiverem em cima ou em baixo você diminui o padding-bottom, se as barras estiverem dos lados você aumenta, encontre a medida perfeita(mas sempre em porcentagem)</p>
+   <h2>Sombras</h2>
+   <p>para colocar sombras em uma caixa nós vamos usar o parâmetro <strong>box-shadow</strong>, ele é um shorthand, nele você coloca primeiro o deslocamento da sombra para os lados, depois o deslocamento da sombra para cima ou para baixo, depois o quanto a sombra vai embassar, depois o quanto a sombra vai se espalhar, e por fim a cor da sombra, lembrando que você precisa informar as medidas em forma de px que não são a cor</p>
+   <p>quando você for colocar o deslocamento da sombra para os lados, se você colocar um número positivo a sombra vai ficar deslocada para a direita, se colocar um número negativo ela vai ficar deslocada para a esquerda, o mesmo vale para cima e para baixo, números positivos deslocam para baixo, e negativos para cima</p>
+   <p>sobre a cor, sempre use o preto, não existe sombra de outra cor, o que você vai mudar é a transparência, sempre deixe a sombra um pouco transparênte, isso dá a impressão que é uma sombra real</p>
+   <p>mas isso só serve para caixas, se você quiser colocar sombra em um texto você usa <strong>text-shadow</strong>, nele você coloca os mesmos valores do box-shadow, mas não coloca embassamento</p>
+   <p>é bom você usar o devtools para te ajudar com as sombras também, você pode mudar as sombras à mão no devtools e depois copiar para o Visual Studio, mas você também pode criar sua própria sombra com uma ferramenta do devtools</p>
+   <p>para usar essa ferramenta, primeiro você precisa criar a propriedade box-shadow no código original, depois você abre o devtools(no google chrome), você seleciona esse elemento e nas configurações css dele vai aparecer o box-shadow, à esquerda da primeira medida vai ter um "quadradinho", aperte nesse quadrado para abrir o editor de sombra</p>
+   <p>é possivel que a forma de abrir esse editor mude, e para entender qual editor eu estou falando vou deixar um <a href="https://youtu.be/JACiDRNWjjQ?list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s&t=473" target="_blank">link do guanabara abrindo</a></p>
+   <h2>Vértices Arredondadas</h2>
+   <p>para arredondar as vértices(que são as pontas) de uma caixa, você usa o <strong>border-radius</strong></p>
+   <p>no border-radius você coloca valores em px, você pode colocar quatro, dois, ou um único valor</p>
+   <p>quando você coloca quatro valores, cada valor vai estar configurando: </p>
+   <ol>
+       <li>primeiro: ponta esquerda de cima</li>
+       <li>segundo: ponta direita de cima</li>
+       <li>terceiro: ponta direita de baixo</li>
+       <li>quarto: ponta esquerda de baixo</li>
+   </ol>
+   <p>quando você coloca dois valores, cada um configura: </p>
+   <ol>
+       <li>primeiro: ponta esquerda de cima e ponta direita de baixo</li>
+       <li>segundo: ponta direita de cima e ponta esquerda de baixo</li>
+   </ol>
+   <p>se você colocar um único valor, que é o mais comum e que fica mais legal, ele arredonda todas as bordas com aquele valor</p>
+   <p>você também pode colocar porcentagem, mas é menos usado, geralmente a porcentagem é usada para deixar uma caixa redonda, se você colocar um border-radius de 50% em uma caixa não muito grande, ela vai ficar em forma de círculo</p>
+   <h2>Bordas Decoradas</h2>
+   <p>você pode colocar bordas em formato de imagem em uma caixa, apesar de isso ser extremamente pouco usado e feio, mas vai que você precisa um dia?</p>
+   <p>mas para criar uma borda com uma imagem, primeiro você precisa ter essa imagem, você pode pegar uma imagem pronta ou fazer você mesmo com o gimp, para dar certo o meio da imagem tem que estar vazio</p>
+   <p>se quiser ter uma ideia de como criar uma imagem dessas, clique nesse link com o <a href="https://youtu.be/n0rjAs_Im4w?list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s&t=121"  target="_blank">guanabara fazendo a dele</a></p>
+   <p>com a imagem, você primeiro coloca o parâmetro border normal, não vai dar certo se o elemento já não tiver uma borda normal</p>
+   <p>depois você usa o parâmetro <strong>border-image</strong>, nele você coloca primeiro a função <strong>url('')</strong> e no meio das aspas desses parentêses você coloca a url da imagem, você pode usar ctrl+enter para ver as opções</p>
+   <p>depois da url, você coloca o corte(é só um número, não uma medida como px por exemplo), e por último você tem duas opções, você pode colocar repeat ou stretch, geralmente você vai usar o repeat</p>
+   <p>depois de colocar esses 3 parâmetros no border-image, você ajusta o segundo parâmetro como devtools até ficar no ponto perfeito</p>
+   <h1>Extras</h1>
+   <h2>Configurações Úteis Para Listas</h2>
+   <p>Para o marcador não ficar fora da caixa, você tem que usar a configuração <strong>list-style-position: inside;</strong> no CSS da lista</p>
+   <p>Você pode escolher quantas colunas a lista vai ter usando o parâmetro <strong>columns</strong>, então digamos que você quisesse uma lista de duas colunas, você colocaria <strong>columns: 2;</strong> no CSS da lista</p>
+   <p>o parâmetro <strong>list-style-type</strong> muda o marcador da lista, então se você quisesse por exemplo trocar o marcador por um emoji, e digamos que o código desse emoji é 2714, então você usaria <strong>list-style-type: "\2714"</strong>, e mais uma dica sobre isso, se achar que ficou muito apertado, você pode usar o código <strong>\00A0</strong> depois do código do emoji, esse código simula um espaço, depois dessa mudança ficaria <strong>list-style-type: "\2714\00A0'</strong>, e nunca se esqueça das aspas</p>
+   <a href="../módulo2_parte1/index.html" class="link_interno">Acessar a Primeira Parte</a>
+</body>
+</html>

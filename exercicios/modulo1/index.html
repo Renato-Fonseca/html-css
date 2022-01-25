@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>minha wiki</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="numero.jpg" type="image/x-icon">
+</head>
+<body>
+    <h1>Como Coloca Emoji No Site?</h1>
+    <p>coloque uma barra invertida e depois dela o codigo do emoji escolhido, encontre o codigo do emoji na <a href="https://emojipedia.org" target="_blank" rel="external">emojipedia</a>, lembrando que o código é o que está depois de U+</p>
+    <h1>Como Coloca Imagens No Site?</h1>
+    <a href="https://youtu.be/8rkuukKA8a4?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&t=295" target="_blank" rel="external">como tratar imagens no gimp</a>
+    <p>use a tag img para isso, primeiramente, baixe uma imagem e coloque ela na pasta do seu site, depois disso, use a tag img no local onde quer colocar a imagem, nas primeiras aspas você aperta ctrl+espaço e escolhe a imagem baixada, e nas segundas você coloca um texto alternativo, ou seja, do que a imagem se trata</p>
+    <p>se você quiser colocar uma imagem externa, ou seja, uma imagem de fora do seu index, copie o endereço da imagem e cole ele nas primeiras aspas</p>
+    <h2>qual a diferença dos formatos de imagem JPAG e PNG</h2>
+    <p>o JPAG é melhor na parte de compactação sua imagem vai ser mais leve, deixando seu site mais leve e vai ser mais facil para os usuarios encontrarem seu site na web, mas a imagem fica com uma qualidade menor e não é possivel que a imagem seja transparente</p>
+    <p>já o PNG não compacta a imagem tão bem, deixando ela com melhor qualidade, só que mais pesada e seu site também, mas é possivel que a imagem seja transparente</p>
+    <h2>como fazer a imagem se adaptar ao tamanho da tela do usuario</h2>
+    <p>para isso, crie cópias dessa imagem, 3 ou 4, (o nome do arquivo não pode ter espaços, nem acentos e tem que ser tudoem minúsculas)cada uma de um tamanho diferente, é interresante ser uma de 300, uma de 700, e uma de 1000</p>
+    <p>depois que tiver as imagens prontas, use a tag picture e faça os seguintes passos, começando com as imagens que não são a maior, quando chegar na maior você pula: </p>
+    <ol>
+        <li>abra uma tag source:media:type, mude o media="" para max-width, invés de min-width, coloque o nome da menor imagem restante no srcset=""(sem espaçosno nome do arquivo), </li>
+        <li>mude o type="" para image/png se for uma imagem png ou image/jpeg se for jpeg</li>
+        <li>depois do max-width: coloque o tamanho da próxima imagem(da imagem que você vai usar no próximo passo)+50, e px a direita do número sem dar espaço, da erro se você usar valores menores de 500px</li>
+    </ol>
+    <p>quando chegar na maior imagem, apenas coloque um img normal(dentro do picture obviamente) com a imagem maior</p>
+    <h1>Como Coloca Áudio Em Um Site?</h1>
+    <p>tem dois jeitos de colocar um áudio em um site, as duas usam a mesma tag, a tag <strong>audio</strong></p>
+    <p>mas antes de tudo você precisa ter na pasta do index 1 formato de arquivo de audio se for da maneira mais simples ou 2 ou mais(você precisa ter um conversor) se for da mais completa, lembre-se de não colocar espaços nem assentos no nome do arquivo, e tudo em letras minúsculas</p>
+    <p>cuidado com os arquivos wav, eles são muito pesados</p>
+    <h2>mais simples</h2>
+    <p>esse é o jeito mais simples, em que você abre uma tag <strong>audio</strong> e dentro da abertura dela você coloca no src="" o nome do arquivo de audio que você quer tocar</p>
+    <h2>mais completo</h2>
+    <p>esse é um jeito mais completo que da varias opções de audio para o usuario, se uma der errado, ele tenta outra</p>
+    <p>para isso, separe varios tipos de formato de audio do mesmo audio, e então abra uma tag <strong>audio</strong>, mas dessa vez você apaga o src="" de dentro da abertura e coloca varios source:src entre a abertura e fechamento, cada um com um formato de audio diferente,e cuidado com a ordem dos source:src, vá em ordem crscente, ou seja, primeiro os menores depois os maiores, também da pra deixar um parágrafo no final dizendo que deu errado(ele só vai ser mostrado se todos os audios derem errado) com o link do audio para o usuário baixar</p>
+    <h2>alguns parâmetros</h2>
+    <p>você pode colocar algum desses parâmetros na abertura da tag <strong>áudio</strong> se quiser:</p>
+    <p><strong>preload=""</strong>: use ele pro site carregar todo o audio antes de te mostrar, existem 3 opções, auto(que é o padrão) vai carregar o áudio todo logo quando o usuário abre o site mesmo que p usuário nunca toque o áudio, evite usar isso para não deixar seu site muito lento, metadata vai carregar só as informações do áudio(nome, data, duração, etc), isso quando o usuário tocar o áudio, e none não vai carregar nada enquanto o usuário não rodar o áudio</p>
+    <p><strong>autoplay</strong>: esse parâmetro é bem bugado, às vezes funciona às vezes não, a função dele é rodar o áudio logo quando o site é aberto, sem o usuário ter feito nada</p>
+    <p><strong>controls</strong>: esse é omais usado, use ele dentro da abertura da tag <strong>audio</strong> para mostrar um controle no site, com ele o usuário pode rodar o áudio, travar, diminuir som, etc</p>
+    <p><strong>loop</strong>: não é nada recomendado por deixar o site muito lento, mas loop cria um looping do áudio, ele vai rodar infinitamente</p>
+    <h1>como coloca videos no site?</h1>
+    <p>video é a mídia mais complicada de se colocar em um site por causa do consumo de tráfego de dados. Os vídeos são varias imagens que vão passando, por isso eles são muito mais pesados do que imagens normais, imagine quantas vezes a web iria ter que ir e voltar pra mostrar cada imagem de um vídeo.Quando um usuário assiste à um vídeo em um site é isso que acontece, e daí temos duas opções, hospedagem interna e externa.</p>
+    <p>é bem perigoso você usar a hospedagem interna porque você vai consumir dados do seu servidor ou do seu cliente, se você estiver fazendo o site para um cliente, você tem que perguntar para ele se ele quer isso mesmo ou quer usar a hospedagem externa, você precisa deixar os pros e contras bem claros</p>
+    <h2>hospedagem interna</h2>
+    <p>a única coisa boa da hospedagem interna é que você pode inserir qualquer video em seu site, sem ele precisar estar no youtube ou você precisar pagar o vimeo para hospedagem</p>
+    <p>o ruim é que cada úsuario vai consumir seu próprio serviço de hospedagem ou o do seu cliente, deixando as contas cada vez mais caras, tome cuidado, mas se achar melhor faça o seguinte: </p>
+    <p>primeiro, como nos áudios e imagens, separe todos os tipos de videos,eles são mp4, mkv, webm e ogv. Depois disso, crie uma tag <strong>video</strong>, e no meio da abertura e fechamento dela, coloque varios  source:src, um com cada video</p>
+    <p>primeiro os menores, depois os maiores, em cada source:src você também tem que mudar o type="", dentro dele coloque o tipo do vídeo, se for um vídeo mp4, por exemplo, coloque video/mp4, se for mkv, video/mkv, e assim vai</p>
+    <h2>hospedagem externa</h2>
+    <p>caso você ou seu cliente tenha escolhido usar a hospedagem externa, você tem mais duas opções, usar o youtube ou o vimeo</p>
+    <h3>usando o Youtube</h3>
+    <p>o bom de usar o youtube é que ele é que o algoritmo dele é muito bom, melhor do que o do vimeo, deixando o video com menos "travadinhas",  e que ele é totalmente gratuito</p>
+    <p>os problemas são que para você  possa usar o youtube para colocar videos no seu site o video tem que estar obviamente no youtube, a qualidade dos videos do vimeo é melhor, todos tem acesso ao seu video se você deixar ele no youtube, então se você ou seu cliente quiser um site de estudos, onde o úsuario paga um valor para ter acesso à videos de estudo, todos terão acesso à esse video, quando você pausa um video no youtube aparecem outras opções de videos para assistir, se seu cliente estiver fazendo alguma propaganda por exemplo, o úsuario pode travar o video e aparecer um video do concorrente, E MAIS IMPORTANTE: tome muito cuidado com direitos autorais, só use videos livres, seus próprios videos(ou do seu cliente) ou videos que o dono do video do video deixou você usar, preste muita atenção em tudo isso</p>
+    <p>bom, mas se você tiver escolhido o youtube, é bem facil usar ele, é só  fazer o seguinte: </p>
+    <p>primeiro, entre no youtube, entre no video que você vai colocar no site, e embaixo dele clique em "compartilhar", depois em "incorporar", e depois não mexa em nada e apenas clique em "copiar", depois cole o código no html na area que você dejesa colocar o video, se você quiser você poder mudar a width="" e height="" colocando a largura e altura que achar melhor</p>
+    <h2>usando o vimeo</h2>
+    <p>o bom de usar o vimeo é que a qualidade do video é melhor, e o video não precisa estar necessariamente no youtube para você conseguir colocar</p>
+    <p>o ruim é que ele é pago e é bem caro, se você quiser usar você tem que pagar uma taxa todo ano para cada mês o algoritmo dele não é tão bom como o do youtube, então às vezes pode dar umas travadas se a internet estiver fraca, e como o youtube você deve tomar muito cuidado com direitos autorais</p>
+    <p>o video precisa estar no vimeo também, mas isso não é nada demais porque no vimeo você pode escolher quem tem acesso aos videos</p>
+    <p>se você tiver decidido usar o vimeo, você vai copiar o código que o vimeo vai dar do video que nem o youtube, veja algumas <a href="https://youtu.be/3hng-hmSv2Y?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&t=424" target="_blank">instruções rápidas do guanabara</a></p>
+    <h1>Como Coloca Favicon Em Um Site?</h1>
+    <p>para colocar um favicon no site, entre em <a href="https://favicon.io/">favicon.io</a>, crie seu favicon lá e faça download guardando o favicon dentro da <strong>pasta do seu site</strong>, depois que o favicon ja estiver dentro da pasta do seu site, na head do site, coloque a tag link : favicon e dentro das aspas aperte ctrl+espaço e escolha seu favicon</p>
+    
+    <h1>Algumas Formatações e Dicas Úteis</h1>
+    <p>para imprimir os sinais de menor e maior, use &lt; e &gt;(olhe o index para ver)</p>
+    <p>para colocar uma linha horizontal em seu site, use a tag <strong>hr</strong></p>
+    <p>para quebrar linha, use a tag <abbr title="break roll(quebra de linha)">br</abbr></p>
+    <p>para colocar algo em negrito, use a tag <strong>strong</strong>, e algo em italíco, a tag <em>em</em></p>
+    <p>para inserir o <code>código fonte</code> em algo, use a tag <strong>code</strong>, e então todas as letras desta frase vão ocupar o mesmo espaço, dando um "ar de codigo"</p>
+    <p>se quiser que a sua frase considere as quebras de linha, coloque tudo dentro da tag <strong>pre</strong></p>
+    <p>IMPORTANTE, se quiser fazer uma citação, por exemplo: como diria o pai de um amigo: <q>o computador é um burro muito rápido</q>, invés de usar as aspas normais, use a tag <strong>q</strong> para substituir as aspas nesses casos em que as aspas estão representando algo que outra pessoa disse anteriormente, ou seja, uma citação</p>
+    <p>para criar abreviações, use a tag <strong>abbr</strong> e dentro das aspas coloque o significado da abreviação</p>
+    <p>pra marcar o texto como se fosse caneta marca texto, use a tag mark</p>
+    <p>para sublinhar algo, use a tag ins</p>
+    <h1>Listas</h1>
+    <h2>listas ol(listas ordenadas)</h2>
+    <p> use a tag ol para usar listas ordenadas, ou seja, listas que tem uma ordem, tipo, 1. bla bla bla, 2. bla bla bla.</p>
+    <p>no meio da tag ol, coloque cada item da lista ordenada em uma tag li para cada</p>
+    <p>para personalizar esse tipo de lista, use a tag type na abertura da tag ol, dentro das aspas do type coloque o tipo desejado. Existem 5 tipos, 1 para lista númerica, a para alfabética com letras minúsculas, A para alfabética com letras maiúsculas, i para números romanos minúsculos, I para números romanos maiúsculos.</p>
+    <h2>listas ul(listas não ordenadas)</h2>
+    <p>use a tag ul para listas não ordenadas, coloque cada item da lista dentro de uma tag li para cada, que devem estar todos dentro da tag ul</p>
+    <p> para personalizar as listas não ordenadas, use o type dentro da abertura da tag ul, e dentro das aspas, coloque o tipo. existem 3 tipos, disc para um disco preto, circle para um disco oco, e square para um quadrado preto</p>
+    <h2>misturando listas</h2>
+    <p>você pode aninhar quantas listas você quiser, e elas não precisam ser do mesmo tipo para isso</p>
+    <ul>linguagens de programação
+        <li>antigas</li>
+        <ol>
+            <li>clipper</li>
+            <li>visual basic</li>
+            <li>Fortran</li>
+            <li>delphi</li>
+        </ol>
+        <li>novas</li>
+        <ol>
+            <li>PHP</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Kotlin</li>
+        </ol>
+    </ul>
+    <h2>dica rápida</h2>
+    <p>aperte <strong>CTRL+ENTER</strong> quando estiver com o cursor dentro de uma tag para passar para linha de baixo sem quebrar a tag, isso é muito útil quando se trabalha com listas</p>
+    <h2>listas de definição</h2>
+        <p>listas de definição são listas para descrever o significado de palavras</p>
+        exemplo:
+        <dl>
+            <dt>HTML</dt>
+            <dd>linguagem de marcação para criação de conteúdo para um site</dd>
+        </dl>
+        <p>para fazer, use a tag dl, e dentro dela, coloque dt para as palavras, e dd para os significados</p>
+    <h1>Links e Âncoras</h1>
+    <h2>Links Externos</h2>
+    <p>links externos são links para outro site, do fora do seu site</p>
+    <p>para isso, use a tag a(âncora). Primeiramente, escreva o nome do link e envelope ele com a tag <strong>a</strong> e coloque no href="" a URL completa do local que você quer que o link leve </p>
+    <h2>target e rel</h2>
+    <p>esses dois são muito importantes para aumentar a semântica de seu site, use eles dentro da abertura da tag a, ao lado do href, na maioria das vezes, você irá usar o target para fazer seu link criar uma aba nova no google sem sobrepor seu site, assim seu site nao será fechado, para isso, dentro das aspas do target, digite _blank(exatamente deste cheio)</p>
+    <p>e o rel mexe por dentro de seu site, ele pode não mostrar nada para o usuário, mas ele fala ao google qual qual é o sistema de navegação que você planeja para o usuário, sempre use ele em seus links, dentro das aspas dele, digite qual é o objetivo do link, se for link para abrir algo em outra aba por exemplo, digite "external"</p>
+    <h1>Links Internos</h1>
+    <p>links internos são links que levam para algum site na mesma pasta de seu index, com eles você pode dividir seu site em mais de uma página se achar que ele ficou muito pesado, muito útil às vezes</p>
+    <p>nestes casos é interessante colocar <strong>next</strong> dentro do rel="" se o link for para a próxima página do site, e <strong>prev</strong> se for para voltar para a anterior</p>
+    <p>para usar este tipo de link, use a tag <strong>a</strong> e dentro do href="" segure CTRL+ESPAÇO para ver quais as páginas disponiveis dentro da pasta</p>
+    <h2>nofollow</h2>
+    <p>use dentro do rel=""quando for por exemplo um oferecimento de alguma coisa, o nofollow serve para você mostrar ao google que a intenção do link não é que o usuário crie uma navegação nova, e sim apenas mostre o site</p>
+    <h2>arquivos em pastas</h2>
+    <p>se o arquivo estiver dentro de uma pasta, você também precisa mostrar o caminho para abrir a pasta</p>
+    <p><a href="https://youtu.be/LeLnlT-ZKw8?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&t=540" target="_blank" rel="external">guanabara explicando esses casos</a></p>
+    <h2>links para download</h2>
+    <p>use esse tipo de link quando quiser que seu usuário baixe um arquivo</p>
+    <p>use download="" a direita do href, e dentro dele coloque o arquivo a ser baixado, e mais a direita, coloque type="" e dentro dele coloque o media type do arquivo, para descobrir o media type de cada arquivo, entre em <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">iana.org</a>, lá oq está escrito na coluna "name" é o nome do arquivo, como zip, e oque esta escrito na coluna do meio "tenplate" são os media types, como application/zip</p>
+    <h1>Começando a falar de CSS</h1>
+    <p>existem 3 tipos de CSS:</p>
+    <p>o CSS inline, onde você muda o estilo de uma tag sem mudar o resto, isso só é bom quando você quer mudar apenas algum detalhe, o grande problema disso é que o CSS fica misturado com o HTML, daí vira uma bagunça para quem está fazendo o site, só use quando quiser mudar apenas uma coisa. para Usar é só usar a tag <strong>style</strong> dentro da abertura da tag que você quer mudar</p>
+    <p>o CSS interno, onde você muda o estilo de todar as tags de um tipo, por exemplo, se você quiser mudar a cor de todos os h1, você abre um <strong>style</strong> dentro do head, e dentro dele você coloca h1 e abre {}, daí dentro do {}você coloca o estilo de todos os h1, lembrando que você só precisa abrir uma tag <strong>style</strong> no head para todos os estilos</p>
+    <p>o CSS externo, onde você cria o código CSS em outra página, e insere esse código em cada documento com o link:css, assim quando você muda o código css da página do CSS, o código CSS de todos os documentos muda também, deixando cada documento mais simples por conta de menos linhas, para isso o arquivo que contém o CSS tem que estar na pasta do index. Nesses arquivos você também pode colocar regras no inicio, toda regra começa com @, uma muito interessante é a @charset "UTF-8", ela arruma a questão dos assentos</p>
+</body>
+</html>

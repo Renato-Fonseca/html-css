@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap'); 
+
+body {
+    background-color:blueviolet;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+a {
+    color: rgb(221, 221, 20);
+}
+p {
+    font-size: 1.5em;
+    text-align: justify;
+}
+ul,ol {
+    font-size: 1.4em;
+}
+h1 {
+    font-size: 3em;
+    font-family: Caveat;
+    text-align: center;
+}
+h2 {
+    font-size: 2.5em;
+    font-family: Caveat;
+    text-align: center;
+}
+h3 {
+    font-size: 2.3em;
+    font-family: Caveat;
+    text-align: center;
+}
+.imagem_centro {
+    display: block;
+    margin: auto;
+}
+#anatomia_caixas {
+    min-width: 500px;
+    max-width: 600px;
+}
+#estilos_de_borda {
+    width: 85%;
+    max-width: 669px;
+}
+a.link_interno {
+    background-color: gold;
+    color: black;
+    text-decoration: none;
+    display: block;
+    width: 350px;
+    height: 100px;
+    margin: auto;
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 100px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}

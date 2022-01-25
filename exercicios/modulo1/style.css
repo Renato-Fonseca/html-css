@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap'); 
+
+body {
+    background-color:rgb(42, 117, 255);
+    font: normal italic 1.5em arial;
+}
+a {
+    color:rgba(255, 255, 255, 0.733)
+}
+h1 {
+    font-family: Caveat;
+    font-size:  2.5em;
+}
+h2 {
+    font-family: Caveat;
+    font-size: 2em;
+}
+h3 {
+    font-family: Caveat;
+    font-size: 1.5em;
+}
