@@ -50,6 +50,7 @@ header > p {
     margin: 0px auto;
     text-align: center;
     font-size: 1.2em;
+    font-family: var(--fonte-padrao);
     color: white;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.655);
     max-width: 535px;
@@ -57,7 +58,7 @@ header > p {
 }
 header > nav {
     padding: 31px 0px 0px 0px;
-    width: 360px;
+    width: 400px;
 }
 header > nav > a {
     text-decoration: none;
