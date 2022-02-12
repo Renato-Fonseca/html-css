@@ -80,5 +80,16 @@
     <p>você também pode colocar valores escritos, por padrão o background-size é <strong>auto</strong>, mas você pode colocar outros dois valores escritos:</p>
     <p>o <strong>contain</strong> faz com que a imagem seja totalmente exibida o tempo todo, a imagem vai "se esforçar" para não cortar nenhuma parte mudando largura e altura</p>
     <p>o <strong>cover</strong> faz a imagem sempre cobrir a tela inteira, mesmo que tenha que cortar um pouco a imagem pra isso, esse é um dos melhoras valores pra se colocar no background-size de imagens de fundo do site inteiro, fica bem responsivo, isso aliado a uma boa escolha do background-position pode deixar seu fundo bem legal</p>
+    <h2>Deixando o Fundo Fixo</h2>
+    <p>é muito legal fazer isso com imagens de fundo do site todo, principalmente quando aliado ao background-size: cover;</p>
+    <p>a propriedade que vamos aprender é o <strong>background-attachment</strong>, é bem simples usar ele porque ele só pode assumir dois valores: scroll ou fixed</p>
+    <p>por padrão o background-attachment tem o valor <strong>scroll</strong>, isso significa que a imagem vai se mover junto com o conteúdo</p>
+    <p>mas você pode mudar o background-attachment para o valor <strong>fixed</strong>, isso faz com que a imagem fique parada mesmo que o conteúdo esteja se movendo, isso faz aquele efeito incrível de imagens de fundo do site todo, é muito usado<p>
+    <h2>Shorthand Background</h2>
+    <p>ao invés de ficar configurando tantas propriedades uma por uma você pode mudar todas de uma vez com apenas uma declaração com o shorthand <strong>background</strong></p>
+    <p>nele você coloca os valores na seguinte ordem: <strong>color image position / size repeat attachment</strong></p>
+    <p>você deve estar se perguntando o porque da barra entre o position e o size, infelizmente não funciona se o position e o size não estivem separados por uma barra, não sei o porque disso</p>
+    <p>e outra coisa, você não consegue informar o size se você não informar o position</p>
+    <p>é bem bugado, na dúvida informe todos as outras propriedades menos o size, daí o size você informe em uma outra declaração usando o background-size normal</p>
 </body>
 </html>
