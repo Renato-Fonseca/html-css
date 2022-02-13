@@ -1,23 +1,22 @@
-body {
-    height: 100vh;
-    /*background-color: black;
-    background-image: url('imagens/wallpaper002.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;*/
-    background: black url('imagens/wallpaper002.jpg') center center / cover no-repeat fixed;
-    background-attachment: ;
-}
-main {
-    background-color: white;
+section {
+    background-color: purple;
+    /*height: 500px;*/
+    height: 94vh;
     padding: 10px;
-    /*min-width: 350px;
-    max-width: 700px;*/
-    width: 370px;
-    margin: 70px auto 70px auto;
-    border-radius: 10px;
-    text-align: justify;
+    background-image: url('imagens/target001.png');
+    background-size: 100% 100%;
+    position: relative;
 }
-
-/*center center /*/ 
+article {
+    background-color: yellow;
+    height: 200px;
+    width: 400px;
+    background-image: url('imagens/target001.png');
+    background-size: 100% 100%;
+    position: absolute;
+    
+    left: 50%;
+    top: 50%;
+    /*transform: translate(50%, -50%);*/
+    transform: translate(-50%, -50%);
+}
