@@ -101,12 +101,16 @@
    <h2>Como Centralizar Imagens?</h2>
    <p>se tiver tentado isso, você provavelmente percebeu que não é possivel usar o <strong>margin: auto;</strong> em imagens, isso é porque elas são do tipo inline-level,que vimos mais a acima</p>
    <p>para centralizar imagens, é só mudar o tipo delas para box-level(ou block), para isso nós mudamos o formato do display usando <strong>display: block;</strong>, dessa forma, a imagem vai mudar para o tipo box-level e o <strong>margin: auto;</strong> vai funcionar nessa imagem</p>
-   <h2>Como Centralizar Elementos Tanto na Horizontal Como na Vertical Dentro de um Elemento Pai(continuar...)</h2>
+   <h2>Como Centralizar Elementos Tanto na Horizontal Como na Vertical Dentro de um Elemento Pai</h2>
    <p>bom, você já prendeu a centralizar elementos na horizontal com o margin: auto;, mas você deve estar se perguntando como centralizar eles também na vertical, você vai precisar fazer algumas gambiarras se quiser fazer isso sem usar flexbox ou grid</p>
    <p>a primeira coisa que você vai precisar fazer é mudar o position do elemento pai e do elemento que você quer centralizar, no elemento pai você configura <strong>position: relative;</strong>, e na caixa que você quer centralizar você configura <strong>position: absolute;</strong></p>
    <p>como você já aprendeu ou vai aprender mais abaixo na wiki, quando você configura o position pra absolute e este elemento está dentro de um elemento de position relative, você pode posicionar o elemento filho em relação ao pai usando os parâmetro top e left(veja mais abaixo na wiki para entender melhor), então agora você vai precisar usar esses dois no elemento que você quer centralizar(o filho) com o valor de 50% OS DOIS</p>
-   <p>agora a ponta esquerda de cima da imagem já está exatamente no centro do elemento pai, continuar</p>
-   <p></p>
+   <p>agora a ponta esquerda de cima da imagem já está exatamente no centro do elemento pai, vamos ter que colocar o meio do elemento filho no local onde está a ponta esquerda dele, para isso vamos fazer uma 'transformação' com o parâmetro <strong>transform</strong></p>
+   <p>o transform é uma das propriedades mais úteis do CSS, usando-a, elementos podem ser traduzidos, rotacionados, ter seu tamanho ajustado e inclinados de acordo com os valores definidos, pesquise mais sobre essa propriedade</p>
+   <p>No nosso caso, a gente vai 'traduzir' a caixa, isso significa que vamos posiciona-la, para isso vamos usar o <strong>transform: translate;</strong></p>
+   <p>Agora você simplismente coloca <strong>transform: translate(-50%, -50%)</strong> nas configurações do elemento filho, o primeiro número do parentêses é o deslocamento para a direita, e o segundo é para baixo, como usamos números negativos o primeiro vai servir para deslocar para esquerda e o segundo para cima</p>
+   <p>Como você percebe nós colocamos valores em porcentagem, essa porcentagem é relacionada com a altura e a largura do elemento filho</p>
+   <p>é isso, fazendo esses passos a imagem vai ficar cravada no meio da div, mas não deixe de saber mais sobre o transform, é uma propriedade importante</p>
    <h2>Agrupando Caixas De Maneira Semântica</h2>
    <p>como nós já vimos, um site é uma mistura de várias caixas, umas dentro das outras,para agrupar as caixas nós vamos usar tags semânticas, tem gente que agrupa caixas usando várias tags div e span, mas vira uma bagunça e não tem semântica, e semântica é super importante</p>
    <p>existem 7 tags semânticas principais para ajeitar seu conteúdo, olhe só: </p>
