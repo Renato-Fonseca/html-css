@@ -28,6 +28,9 @@ header > p > a {
     text-decoration: none;
     font-weight: bolder;
 }
+header > p > a:hover {
+    text-decoration: underline;
+}
 header > h1 {
     font-variant: small-caps;
     font-family: var(--fonte2);
@@ -51,8 +54,21 @@ section.imagem > p {
     padding: 10px 0px;
     width: 44vw;
 }
-
-
+section#img_flor {
+    background-color: white;
+    background-image: url('imagens/background001.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+}
+section#img_livro {
+    background-color: white;
+    background-image: url('imagens/background002.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
 
 footer {
     background-color: black;
@@ -61,4 +77,4 @@ footer {
     text-align: center;
     font-family: var(--fonte1);
 }
-/*resolver problema dos tamanhos*/
+/*colocar imagens e fazer efeito paralax*/
