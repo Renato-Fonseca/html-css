@@ -8,7 +8,7 @@
 }
 @font-face {
     font-family: 'Bebas';
-    src: url("pacote-projeto-d010/fontes/BebasNeue-Regular.ttf") format("Truetype";
+    src: url("pacote-projeto-d010/fontes/BebasNeue-Regular.ttf") format("Truetype");
 }
 :root {
     --cor1: #c5ebd6;
@@ -22,3 +22,47 @@
     --fonte-destaque:'Bebas Neue', 'cursive'; 
     --fonte-android: 'Android', 'cursive';
 }
+* {
+    margin: 0px;
+}
+header {
+    background-image: linear-gradient(0deg, var(--cor5), var(--cor4));
+    height: 207px;
+}
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-weight: 500;
+    font-size: 2.6em;
+    text-align: center;
+    padding: 30px 0px 20px 0px;
+}
+header > p {
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    text-align: center;
+    margin: auto;
+    padding: 0px 0px 20px 0px;
+    width: 550px;
+    background-color: aqua;
+    /*max-width: 550px;*/
+}
+header > nav > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    transition-duration: 0.5s;
+}
+header > nav > a:hover {
+    background-color: var(--cor3);
+    color: var(--cor5);
+    transition-duration: 0.5s;
+}
+/*
+descobrir min-width perfeito para o paragráfo do header;
+ arrumar tamanho do header e arrumar distancia entre elementos do header caso estejam desorganizados;
+ colocar sobra no h1 e p do header;
+ arrumar degradê deixando ele cobrindo todo o nav e começando a partir dele;
+ */
