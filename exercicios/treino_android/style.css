@@ -25,17 +25,22 @@
 * {
     margin: 0px;
 }
+body {
+    background-color: var(--cor-fundo);
+}
 header {
-    background-image: linear-gradient(0deg, var(--cor5), var(--cor4));
-    height: 207px;
+    background-image: linear-gradient(0deg, var(--cor5) 10%, var(--cor4));
+    height: 240px;
+    box-shadow: 0px 1px 8px 1px #00000099;
 }
 header > h1 {
     color: white;
     font-family: var(--fonte-destaque);
     font-weight: 500;
-    font-size: 2.6em;
+    font-size: 3em;
     text-align: center;
-    padding: 30px 0px 20px 0px;
+    padding: 40px 0px 20px 0px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.43);
 }
 header > p {
     color: white;
@@ -44,25 +49,117 @@ header > p {
     text-align: center;
     margin: auto;
     padding: 0px 0px 20px 0px;
-    width: 550px;
-    background-color: aqua;
-    /*max-width: 550px;*/
+    max-width: 600px;
+    min-width: 300px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.575);
+}
+header > nav {
+    padding: 26.3px 0px 0px 0px;
 }
 header > nav > a {
-    color: white;
+    color: var(--cor2);
+    font-weight: bold;
     text-decoration: none;
     padding: 10px;
     border-radius: 3px;
     transition-duration: 0.5s;
+    font-family: var(--fonte-padrao);
 }
 header > nav > a:hover {
     background-color: var(--cor3);
     color: var(--cor5);
     transition-duration: 0.5s;
 }
+main {
+    background-color: white;
+    width: 950px;
+    margin: 0px auto 40px auto;
+    padding: 20px;
+    box-shadow: 3px 0px 9px 0px rgba(0, 0, 0, 0.295);
+    border-radius: 0px 0px 10px 10px;
+}
+main > h1 {
+    color: var(--cor5);
+    font-family: var(--fonte-android);
+    font-weight: 400;
+    font-size: 1.7em;
+    margin: 20px auto;
+}
+main > h2 {
+    font-family: var(--fonte-android);
+    font-weight: 400;
+    font-size: 1.3em;
+    background-image: linear-gradient(90deg, var(--cor2), transparent);
+    text-indent: 10px;
+}
+main > p {
+    font-size: 1.15em;
+    font-family: var(--fonte-padrao);
+    line-height: 2em;
+    text-indent: 35px;
+    text-align: justify;
+    margin: 20px 0px;
+}
+a.externo {
+    background-color: var(--cor2);
+    color: var(--cor5);
+    text-decoration: none;
+    padding: 3px 5px;
+    font-weight: bold;
+}
+a.externo::after {
+    content: "\1F517";
+}
+a.externo:hover {
+    text-decoration: underline;
+}
+aside {
+    background-color: var(--cor2);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.315);
+}
+aside > h1 {
+    background-color: var(--cor5);
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 1.15em;
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px;
+    margin: -10px;
+    margin-bottom: 10px;
+}
+aside > p {
+    font-family: var(--fonte-padrao);
+    font-size: 1.15em;
+    text-indent: 35px;
+    margin: 10px 0px;
+}
+aside > ul {
+    font-size: 1.2em;
+    columns: 2;
+    list-style-type: "\2714\0020";
+}
+footer {
+    background-color: var(--cor5);
+    color: white;
+    font-family: var(--fonte-padrao);
+    text-align: center;
+    padding: 5px;
+}
+footer > p > a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+footer > p > a:hover {
+    color: var(--cor2);
+    text-decoration: underline;
+}
 /*
-descobrir min-width perfeito para o paragráfo do header;
- arrumar tamanho do header e arrumar distancia entre elementos do header caso estejam desorganizados;
- colocar sobra no h1 e p do header;
- arrumar degradê deixando ele cobrindo todo o nav e começando a partir dele;
- */
+colocar as imagens e vídeos;
+arrumar a responsividade das imagens e videos;
+arrumar o aside;
+encontrar min-width e max-width bons pro main;
+ajeitar responsividade em outros elementos(como o h1 do main por exemplo);
+*/
