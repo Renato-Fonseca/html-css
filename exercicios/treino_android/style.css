@@ -72,11 +72,12 @@ header > nav > a:hover {
 }
 main {
     background-color: white;
-    width: 950px;
     margin: 0px auto 40px auto;
     padding: 20px;
     box-shadow: 3px 0px 9px 0px rgba(0, 0, 0, 0.295);
     border-radius: 0px 0px 10px 10px;
+    max-width: 950px;
+    min-width: 360px;
 }
 main > h1 {
     color: var(--cor5);
@@ -113,6 +114,16 @@ a.externo::after {
 a.externo:hover {
     text-decoration: underline;
 }
+img#Irina-Blok {
+    width: 100%;
+}
+img#Dan-Droids {
+    width: 100%;
+}
+img#bugdroid {
+    display: block;
+    margin: auto;
+}
 aside {
     background-color: var(--cor2);
     border-radius: 10px;
@@ -134,6 +145,7 @@ aside > p {
     font-size: 1.15em;
     text-indent: 35px;
     margin: 10px 0px;
+    line-height: 2em;
 }
 aside > ul {
     font-size: 1.2em;
@@ -157,9 +169,7 @@ footer > p > a:hover {
     text-decoration: underline;
 }
 /*
-colocar as imagens e vídeos;
-arrumar a responsividade das imagens e videos;
-arrumar o aside;
-encontrar min-width e max-width bons pro main;
+colocar vídeo;
+arrumar a responsividade do vídeo;
 ajeitar responsividade em outros elementos(como o h1 do main por exemplo);
 */
