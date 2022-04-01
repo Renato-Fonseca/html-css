@@ -33,11 +33,38 @@ header > p > a {
 header > p > a:hover {
     text-decoration: underline;
 }
-main > p {
-    font-size: 3vw;
-    width: 450px;
+section.normal > p {
+    font-size: 3.5vw;
+    width: 44vw;
+    font-family: var(--fonte3);
+    margin: 10vh 30px;
+    line-height: 2em;
 }
-
+section.imagem > p {
+    font-size: 3.5vw;
+    width: 44vw;
+    font-family: var(--fonte3);
+    margin: 10vh 30px;
+    line-height: 2em;
+    background-color: rgba(0, 0, 0, 0.479);
+    color: white;
+}
+section.imagem#flor {
+    padding: 5px 0px;
+    background-image: url('imagens/background001.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+section.imagem#livro {
+    padding: 5px 0px;
+    background-image: url('imagens/background002.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
 footer {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.15em;
