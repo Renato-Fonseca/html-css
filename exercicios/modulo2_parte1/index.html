@@ -96,6 +96,7 @@
   <p>isso se chama <strong>safe combinations</strong>, sempre use esse método</p>
   <p><strong>IMPORTANTE LEMBRAR</strong>, quando for uma fonte de duas palavras você precisa colocar entre parentêses, é assim que funciona o CSS</p>
   <h2>Tamanho da Fonte</h2>
+  <h3>Tamanho Fixo</h3>
   <p>para mudar o tamanho da fonte no CSS você precisa usar o font-size</p>
   <p>existem várias medidas de tamanho de fonte, elas se dividem em dois tipos, Medidas Absolutas e Medidas Relativas</p>
   <p>as Medidas Absolutas são aquelas qu tem sempre o mesmo valor e não tem relação com alguma outra medida</p>
@@ -106,16 +107,27 @@
   <p>lembrando que o tamanho padrão da fonte é o tamanho da fonte dos paragráfos, não dos títulos por exemplo, então se você usar <strong>font-size: 1em</strong> em um h1, ele vai ficar com a fonte do mesmo tamanho de um paragráfo normal</p>
   <p>digamos que o tamanho padrão da fonte seja 16px(como a maioria dos casos), então 1em vale 16px, na mesma lógica 1.5em vale 24px, porque é um em e maior, ou seja, 16px e mais metade disso, 2em vale 32px, e assim vai</p>
   <p>mas agora <strong>falando do px</strong>, digamos de novo que o tamanho padrão da fonte seja 16px, então se você dar a um paragráfo um font-size de 16px, ele vai ficar igual, mas se você dar 18px, ele vai aumentar um pouco e ficar um pouco maior do que o normal, se você dar 14px, ele vai diminuir e vai ficar um pouco menor do que o normal, isso porque nesse caso o padrão é 16px </p>
+  <h3>Tamanho adaptavel</h3>
+  <p>Você também pode fazer a fonte ter um tamanho adaptavel em relação à tela, ou seja, a letra vai aumentar e diminuir com a tela</p>
+  <p>para fazer o tamanho da letra ser uma porcentagem da largura da tela, você usa a unidade vw ao invés de px ou em, ou seja, se você por exemplo quiser que a letra tenha um tamanho igual a 5% da largura da tela, você usaria <strong>font-size: 5vw;</strong></p>
   <h2>Peso e Estilo da Fonte</h2>
   <p>lembra quando falamos de família tipográfica? cada glifo da família tipografica tem um peso diferente, ou seja, o <strong>peso</strong> indica se a letra é mais magrinha ou mais gordinha e chamativa</p>
   <p>e <strong>estilo</strong> seria basicamente um estilo mesmo, um exemplo de estilo é o italico</p>
+  <h3>font-weight</h3>
   <p>para indicar o peso de uma fonte, você usa o <strong>font-weight</strong>, e lembrando os parâmetros <code>weight, width,</code>e <code>height</code> são coisas totalmente diferentes, weight é peso, width é largura, e height é altura</p>
   <p>para usar o font-weight, você pode ou usar palavras-chave, ou usar um número de 100 até 900, pulando de 100 em 100</p>
   <p>é melhor na maioria dos casos usar por palavras-chave, que são <code>lighter, normal, bold, bolder</code></p>
   <p>mas lembrando que nem toda fonte tem todas essas variações, a maioria só tem o normal e o bold</p>
   <p>mas como já disse, você também pode indicar por um número entre 100 e 900, pulando de 100 em 100, você não pode por exemplo usar 150, só pode pular de 100 em 100, ou seja, pode usar 100, 200, 300, e assim vai até 900</p>
   <p>quanto menor o número, mais leve fica, e quanto maior o número, mais pesado, mas isso pode não dar muito certo dependendo da fonte, porque a maioria das fontes não tem tantas variações assim, então fica mais simples se você indicar por palavras-chave</p>
+  <h3>font-style</h3>
+  <p>No <strong>Font-style</strong>, você pode colocar o valor <strong>italic</strong> para mudar a fonte para o estilo italico, tirando isso essa propriedade não tem outras funções muito importantes e úteis</p>
+  <h3>text-decoration</h3>
   <p>tem também o text-decoration, mas esse não é tão importante e provavelmente você vai usar bem pouco, ele serve pra decorar o texto, você pode sublinhar palavras por exemplo</p>
+  <h3>font-variant</h3>
+  <p>No <strong>font-variant</strong>, você pode mudar a fonte para <strong>small-caps</strong>, esse tipo de fonte tem um uso meio confuso e que deve ser evitado. Ele coloca todas as letras em maiúsculo, sendo as verdadeiramente maiúsculas um pouco maior</p>
+  <p>Mas apesar de tudo, pode ser útil e bonito em certos casos, para fazer isso é só usar <strong>font-variant: small-caps;</strong></p>
+  <p>esse tipo de fonte</p>
   <h2>Shorthand Font</h2>
   <p>agora que você já sabe famílias, tamanhos, peso, e estilo de fontes, invés de indicar um de cada vez, você pode simplificar tudo em uma linha só usando o shorthand font</p>
   <p>na verdade, a função que você vai usar é <strong>font</strong>, com ela, você vai colocar esses parâmetros nesse ordem:</p>
