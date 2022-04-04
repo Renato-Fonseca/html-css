@@ -30,7 +30,8 @@ body {
 }
 header {
     background-image: linear-gradient(0deg, var(--cor5) 10%, var(--cor4));
-    height: 247px;
+    min-height: 247px;
+    max-height: 335px;
     box-shadow: 0px 1px 8px 1px #00000099;
 }
 header > h1 {
@@ -78,7 +79,7 @@ main {
     box-shadow: 3px 0px 9px 0px rgba(0, 0, 0, 0.295);
     border-radius: 0px 0px 10px 10px;
     max-width: 950px;
-    min-width: 360px;
+    min-width: 250px;
 }
 main > h1 {
     color: var(--cor5);
@@ -188,8 +189,3 @@ footer > p > a:hover {
     color: var(--cor2);
     text-decoration: underline;
 }
-/*
-colocar vídeo;
-arrumar a responsividade do vídeo;
-ajeitar responsividade em outros elementos(como o h1 do main por exemplo);
-*/
