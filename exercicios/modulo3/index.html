@@ -98,14 +98,19 @@
     <h2>Como é a Organização de Uma Tabela</h2>
     <h3>Hierarquia Simples</h3>
     <p>para criar uma tabela, usamos a tag <strong>table</strong>, dentro dela nós colocamos tags <strong>tr</strong> para indicar as linhas, ou seja, cada tag tr(table row) é uma linha</p>
-    <p>dentro das tr, nós colocamos tags <strong>td</strong>(table data), cada uma com cada dado/coluna/celula da linha. Você pode também usar tags th para indicar <abbr title="cabeçalhos de tabelas são celula que contém um título que informa o são os dados daquela coluna ou linha. cabeçalhos não são dados. Cabeçalhos são iguais a campos em MySQL">cabeçalhos</abbr></p>
+    <p>dentro das tr, nós colocamos tags <strong>td</strong>(table data), cada uma com cada dado/coluna/celula da linha. Você pode também usar tags <strong>th</strong>(table header) para indicar <abbr title="cabeçalhos de tabelas são celula que contém um título que informa o são os dados daquela coluna ou linha. cabeçalhos não são dados. Cabeçalhos são iguais a campos em MySQL">cabeçalhos</abbr></p>
     <p>Lembrando que cabeçalhos não precisam necessariamente estar no topo da tabela(apesar de ser o mais comum), eles podem aparecer no meio, ou até no fim para dar alguma informação final.</p>
+    <p>outra tag muito importante na estrutura de uma tabela é o <strong>caption</strong>, ele indica a legenda da tabela, ele fica em cima da tabela e informa com poucas palavras do que a tabela se trata, mas não é considerado um h1 ou algo assim. Independente da posição que você colocar o caption, por conta da semântica ele sempre vai aparecer em cima da tabela. use um caption sempre que puder para já se acostumar</p>
     <p>você pode fazer a tabela ficar com mais "cara de tabela" ao mexer com o estilo, você pode por exemplo colocar um border nos td, e ainda usar uma propriedade muito interessante quando se trabalha com tabelas que é o <strong>border-collapse</strong> com o valor <strong>collapse</strong> no estilo da tag table, essa propriedade vai fazer as bordas não ficarem separadas e vão dar um efeito visual tipico de tabela! Além disso, você pode ainda colocar padding, font-family, background e o que você bem entender, pode criar classes e ids para determinados td, etc</p>
     <p>nas tags td, você pode usar a propriedade <strong>vertical-align</strong> para alinhar as palavras verticalmente, nela você pode os valores top, middle, ou right. Para mudar o alinhamento horizontal é só usar o text-align normalmente</p>
     <h3>Hierarquia mais Complexa</h3>
     <p>Você pode dividir a tabela em 3 partes: <strong>thead, tbody, e tfoot</strong>. Com essas tags, é possivel ter uma tabela mais organizada, nelas 3 é só usar os tr, td e th que fazem parte da cabeça, corpo, ou pé da tebela. Bem mais organizado, não é?</p>
     <p>Este tipo de hierarquia é bem mais usado, você pode usar a hierarquia simples em tabelas mais basicas se quiser, mas é melhor você sempre usar esse tipo de hierarquia para se acostumar.</p>
-
+    <h2>Escopo</h2>
+    <p>para deixar sua tabela mais semântica, é recomendado que você use a configuração <strong>scope</strong> na abertura das tags th, dentro das aspas você coloca a direção que os dados(os td) correspondentes a esse th estão.</p>
+    <p>Olhe a tabela no navegador e perceba se você organizou a tabela para que os dados fiquem na mesma linha ou na mesma coluna do th</p>
+    <p>se eles estiverem organizados na mesma coluna, você coloca 'col', se for na mesma linha, você coloca 'row'</p>
+    <p>faça isso para cada th da tabela,dessa forma o navegador consegue analisar sua tabela e saber que dados pertencem a que titulos, isso é muito importante para a semântica de seu site, semântica é muito importante!</p>
 
 
     <p>Tome cuidado com as hierarquias, entenda bem e respeita-as, se você errar a hierarquia o elemento não vai ficar no lugar correto</p>

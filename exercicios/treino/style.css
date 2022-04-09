@@ -11,7 +11,7 @@ table {
     margin: auto;
 }
 th, tfoot > tr > td {
-    width: 100pxx;
+    width: 100px;
     height: 50px;
     border: 1px solid black;
     vertical-align: middle;
@@ -24,4 +24,10 @@ td.num {
     padding-right: 10px;
 }
 
-
+caption {
+    padding: 15px 0px;
+    font-size: 1.2em;
+}
+tfoot > tr > th {
+    width: 200px;
+}
