@@ -111,9 +111,13 @@
     <p>Olhe a tabela no navegador e perceba se você organizou a tabela para que os dados fiquem na mesma linha ou na mesma coluna do th</p>
     <p>se eles estiverem organizados na mesma coluna, você coloca 'col', se for na mesma linha, você coloca 'row'</p>
     <p>faça isso para cada th da tabela,dessa forma o navegador consegue analisar sua tabela e saber que dados pertencem a que titulos, isso é muito importante para a semântica de seu site, semântica é muito importante!</p>
-
-
     <p>Tome cuidado com as hierarquias, entenda bem e respeita-as, se você errar a hierarquia o elemento não vai ficar no lugar correto</p>
-    
+    <h2>Efeito Zebrado</h2>
+    <p>O efeito zebrado é um efeito usado a decadas para deixar tabelas com muitas colunas mais faceis de ler</p>
+    <p>Para fezermos esse efeito, nós vamos usar uma pseudo-classe chamada <strong>nth-child</strong>, com ela você pode escolher a cada quantas tags deste tipo as configurações vão ser aplicadas</p>
+    <p>No caso, colocando o valor <strong>2n</strong>, as configurações vão ser aplicadas uma linha sim e a outra não</p>
+    <p>Se você deixar apenas 2n, as linhas afetadas vão ser as pares, e se você colocar 2n-1 as linhas afetadas vão ser as impares</p>
+    <p>então a configuração completa ficaria <strong>tbody > tr:nth-child(2n) {background-color: lightgrey}</strong>, nesse caso as linhas afetadas ficariam cinza claro e sua tabela teria efeito zebrado, mas você pode escolher outras cores se quiser</p>
+    <p>além disso, uma outra dica dependendo da cor escolhida é configurar tanto as linhas pares quanto as impares, usando um seletor 2n e outro com 2n-1, pode ser útil dependendo do caso</p>
     </body>
 </html>

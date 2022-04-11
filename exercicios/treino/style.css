@@ -31,3 +31,10 @@ caption {
 tfoot > tr > th {
     width: 200px;
 }
+tbody > tr:nth-child(2n) {
+    background-color: lightgrey;
+}
+tbody > tr:nth-child(2n - 1) {
+    
+    
+}
