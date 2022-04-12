@@ -34,7 +34,16 @@ tfoot > tr > th {
 tbody > tr:nth-child(2n) {
     background-color: lightgrey;
 }
-tbody > tr:nth-child(2n - 1) {
-    
-    
+table {
+    position: relative;
+    margin-top: 300px;
+}
+thead > tr > th {
+    position: sticky;
+    top:-1px;
+}
+div#teste {
+    background-color: black;
+    width: 50px;
+    height: 1000px;
 }

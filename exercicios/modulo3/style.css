@@ -20,3 +20,7 @@ h3 {
 a {
     color: rgb(250, 24, 8);
 }
+h1.recado {
+    background-color: black;
+    color: white;
+}
