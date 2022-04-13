@@ -44,6 +44,22 @@ thead > tr > th {
 }
 div#teste {
     background-color: black;
-    width: 50px;
+    width: 100vw;
     height: 1000px;
+    padding-top: 40px;
+    position: relative;
+}
+div#child {
+    background-color: rgb(60, 252, 252);
+    width: 100px;
+    height: 100px;
+    position: sticky;
+    top: 0px;
+}
+div#pai_child {
+    margin: 50px;
+    position: relative;
+}
+p.par {
+    width: 100px;
 }
