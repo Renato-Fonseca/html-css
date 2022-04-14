@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="recado">PASSAR POSITION:STICKY E CABEÇALHO FIXO PARA A WIKI</h1>
     <p><strong>Git</strong> é um programa que gerencia as versões do seu site</p>
     <p>antes de aprender isso, quando você fazia um projeto você não tinha o poder de salvar aquela VERSÃO dele, então quando você queria modificar ele e dava errado você não podia voltar ao estado que o projeto estava antes de você modificar, mas agora você vai poder salvar cada estado de seu site criando versões diferentes e fazer backup de versões passadas, então você vai poder modificar o site sem medo de perder aquela versão e estragar o projeto</p>
     <p>o Git guarda e organiza suas versões, é muito menos trabalhoso do que você mesmo manter várias cópias do seu projeto nos arquivos do computador</p>
@@ -124,5 +123,10 @@
     <p>para fazer o cabeçalho ficar fixo, vamos usar o position sticky nos th dentro do thead da tabela(usando o seletor thead > tr > th), e usar position relative na tag table</p>
     <p>agora é só configurar o top dos th para -1px, e pronto, quando o cabeçalho chegar no topo da tela, ele vai agrudar e vai acompanhar o usuário até a tabela desaparecer da tela.</p>
     <p>Caso não se lembre direito de como usar o position, tem uma parte falando disso na wiki do módulo 2, parte de caixas</p>
+    <h2>Mesclagem de Células</h2>
+    <p>Às vezes nossa tabela fica com um buraco em algum lugar pela ausência de uma ou mais células, para isso vamos aprender a fazer uma célula ocupar mais de uma linha ou coluna</p>
+    <p>Para fazer uma célula ocupar mais colunas, nós usamos a propriedade <strong>colspan</strong> na abertura da tag td, e nela colocamos o número de colunas que queremos que ela ocupe</p>
+    <p>Para fazer uma célula ocupar mais linhas, nós usamos a propriedade <strong>rowspan</strong> na abertura do td, nela colocamos o número de linhas que queremos que o td ocupe</p>
+    <p>preste atenção, quando você faz uma célula aumentar pros lados, você usa o colspan, porque você está fazendo ela ocupar mais colunas, e quando você quer que ela aumente pra baixo, você usa o rowspan porque você está fazendo ela ocupar mais linhas, não confunda</p>
     </body>
 </html>
