@@ -1,65 +1,12 @@
-td {
-    border: 1px solid black;
-    height: 50px;
-    vertical-align: middle;
-    text-align: left;
-    padding-left: 10px;
-    width: 200px;
-}
 table {
     border-collapse: collapse;
-    margin: auto;
 }
-th, tfoot > tr > td {
-    width: 100px;
-    height: 50px;
+td, th {
     border: 1px solid black;
-    vertical-align: middle;
-    background-color: gray;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
 }
-td.num {
-    text-align: right;
-    padding-right: 10px;
-}
-
 caption {
-    padding: 15px 0px;
-    font-size: 1.2em;
-}
-tfoot > tr > th {
-    width: 200px;
-}
-tbody > tr:nth-child(2n) {
-    background-color: lightgrey;
-}
-table {
-    position: relative;
-    margin-top: 300px;
-}
-thead > tr > th {
-    position: sticky;
-    top:-1px;
-}
-div#teste {
-    background-color: black;
-    width: 100vw;
-    height: 1000px;
-    padding-top: 40px;
-    position: relative;
-}
-div#child {
-    background-color: rgb(60, 252, 252);
-    width: 100px;
-    height: 100px;
-    position: sticky;
-    top: 0px;
-}
-div#pai_child {
-    margin: 50px;
-    position: relative;
-}
-p.par {
-    width: 100px;
+    padding-bottom: 15px;
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
 }
