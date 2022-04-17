@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="recado">Treinar colgroup e rowgroup e passar pra wiki</h1>
+    <h1 class="recado">Ver vídeo de destaque de colunas, treinar e passar pra wiki</h1>
     <p><strong>Git</strong> é um programa que gerencia as versões do seu site</p>
     <p>antes de aprender isso, quando você fazia um projeto você não tinha o poder de salvar aquela VERSÃO dele, então quando você queria modificar ele e dava errado você não podia voltar ao estado que o projeto estava antes de você modificar, mas agora você vai poder salvar cada estado de seu site criando versões diferentes e fazer backup de versões passadas, então você vai poder modificar o site sem medo de perder aquela versão e estragar o projeto</p>
     <p>o Git guarda e organiza suas versões, é muito menos trabalhoso do que você mesmo manter várias cópias do seu projeto nos arquivos do computador</p>
@@ -106,12 +106,14 @@
     <h3>Hierarquia mais Complexa</h3>
     <p>Você pode dividir a tabela em 3 partes: <strong>thead, tbody, e tfoot</strong>. Com essas tags, é possivel ter uma tabela mais organizada, nelas 3 é só usar os tr, td e th que fazem parte da cabeça, corpo, ou pé da tebela. Bem mais organizado, não é?</p>
     <p>Este tipo de hierarquia é bem mais usado, você pode usar a hierarquia simples em tabelas mais basicas se quiser, mas é melhor você sempre usar esse tipo de hierarquia para se acostumar.</p>
-    <h2>Escopo</h2>
-    <p>para deixar sua tabela mais semântica, é recomendado que você use a configuração <strong>scope</strong> na abertura das tags th, dentro das aspas você coloca a direção que os dados(os td) correspondentes a esse th estão.</p>
-    <p>Olhe a tabela no navegador e perceba se você organizou a tabela para que os dados fiquem na mesma linha ou na mesma coluna do th</p>
-    <p>se eles estiverem organizados na mesma coluna, você coloca 'col', se for na mesma linha, você coloca 'row'</p>
-    <p>faça isso para cada th da tabela,dessa forma o navegador consegue analisar sua tabela e saber que dados pertencem a que titulos, isso é muito importante para a semântica de seu site, semântica é muito importante!</p>
     <p>Tome cuidado com as hierarquias, entenda bem e respeita-as, se você errar a hierarquia o elemento não vai ficar no lugar correto</p>
+    <h2>Escopo</h2>
+    <p>para deixar sua tabela mais semântica, é recomendado que você use a configuração <strong>scope</strong> na abertura das tags th, dentro das aspas você coloca a direção que os dados(os td) correspondentes a esse th estão e se é um grupo ou não.</p>
+    <p>Olhe a tabela no navegador e perceba se você organizou a tabela para que os dados fiquem na mesma linha ou na mesma coluna do th</p>
+    <p>se eles estiverem organizados na mesma coluna e for só uma coluna, você coloca <strong>col</strong>, se for na mesma linha e for só uma linha, você coloca <strong>row</strong></p>
+    <p>Mas se os dados desse th estiverem em mais de uma linha ou mais de uma coluna, ou seja, em um grupo de linhas ou colunas, você usa <strong>rowgroup</strong> e <strong>colgroup</strong></p>
+    <p>Se os dados do th estiverem em um grupo de colunas, você usa colgroup, se estiverem em um grupo de linhas, rowgroup</p>
+    <p>faça isso para cada th da tabela,dessa forma o navegador consegue analisar sua tabela e saber que dados pertencem a que titulos, isso é muito importante para a semântica de seu site, semântica é muito importante!</p>
     <h2>Efeito Zebrado</h2>
     <p>O efeito zebrado é um efeito usado a decadas para deixar tabelas com muitas colunas mais faceis de ler</p>
     <p>Para fezermos esse efeito, nós vamos usar uma pseudo-classe chamada <strong>nth-child</strong>, com ela você pode escolher a cada quantas tags deste tipo as configurações vão ser aplicadas</p>
