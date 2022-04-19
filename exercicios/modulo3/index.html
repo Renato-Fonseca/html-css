@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="recado">Ver vídeo de destaque de colunas, treinar e passar pra wiki</h1>
+    <h1 class="recado">passar overflow e como criar tabelas responsivas pra wiki(explicar overflow bem direitinho)</h1>
     <p><strong>Git</strong> é um programa que gerencia as versões do seu site</p>
     <p>antes de aprender isso, quando você fazia um projeto você não tinha o poder de salvar aquela VERSÃO dele, então quando você queria modificar ele e dava errado você não podia voltar ao estado que o projeto estava antes de você modificar, mas agora você vai poder salvar cada estado de seu site criando versões diferentes e fazer backup de versões passadas, então você vai poder modificar o site sem medo de perder aquela versão e estragar o projeto</p>
     <p>o Git guarda e organiza suas versões, é muito menos trabalhoso do que você mesmo manter várias cópias do seu projeto nos arquivos do computador</p>
@@ -131,5 +131,11 @@
     <p>Para fazer uma célula ocupar mais colunas, nós usamos a propriedade <strong>colspan</strong> na abertura da tag td, e nela colocamos o número de colunas que queremos que ela ocupe</p>
     <p>Para fazer uma célula ocupar mais linhas, nós usamos a propriedade <strong>rowspan</strong> na abertura do td, nela colocamos o número de linhas que queremos que o td ocupe</p>
     <p>preste atenção, quando você faz uma célula aumentar pros lados, você usa o colspan, porque você está fazendo ela ocupar mais colunas, e quando você quer que ela aumente pra baixo, você usa o rowspan porque você está fazendo ela ocupar mais linhas, não confunda</p>
+    <h2>Destacando Colunas</h2>
+    <p>às vezes, você decide que uma ou mais colunas da sua tabela deveriam ter uma configuração CSS diferente das outras, ou seja, um destaque visual em relação às outras, como por exemplo uma cor de fundo diferente</p>
+    <p>Para destacar linhas é fácil, é só dar um class ou id para o tr da linha e mudar como quiser, mas como fazer isso com colunas?</p>
+    <p>Para isso, usamos a tag <strong>colgroup</strong> dentro da tag table(tem que ser dentro do table), e dentro dela colocar várias tags 'col', uma tag col para cada coluna da tabela, ou seja, se a tabela tem 5 colunas, você coloca 5 tags col</p>
+    <p>Bom, já com as tags col, você tem que entender que cada uma representa uma coluna da tabela, a primeira tag col representa a primeira coluna por exemplo, então para mudar as configurações de uma coluna, é só dar uma class ou id para a tag col correspondente a coluna desejada e fazer o que quiser</p>
+    <p>também é possivel dar um span para esses col, ou seja, o col vai valer mais de uma coluna, para isso é só colocar o parâmetro span na abertura da tag col com o número de colunas que ela vai representar, mas isso não é muito útil, só estou falando caso precise um dia</p>
     </body>
 </html>
